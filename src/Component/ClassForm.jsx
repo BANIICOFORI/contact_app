@@ -28,10 +28,9 @@ class ClassForm extends Component{
       this.setState({
     
         students:[
-            // ...this.state.students,
-            // {name:this.state.name,email:this.state.email, mobileNo:this.state.mobileNo,address:this.state.address, city:this.state.city},
-            ...this.state.students,
-            {name:this.state.name,email:this.state.email, gen:this.state.gen,}, 
+             ...this.state.students,
+             {name:this.state.name,email:this.state.email, mobileNo:this.state.mobileNo,address:this.state.address, city:this.state.city},
+          
         ],
     } );
     
@@ -59,19 +58,19 @@ class ClassForm extends Component{
                     </div>
                     <div className="field">
                         <label>Gen</label>
-                        <input type="text" name="gen" placeholder="Gen"value={this.state.students.gen}
+                        <input type="text" name="mobileNo" placeholder="mobileNo"value={this.state.students.mobileNo}
                                 onChange={this.handleRegister} />
                     </div>
-                    {/* <div className="field">
+                    <div className="field">
                         <label>Address</label>
                         <input type="text" name="address" placeholder="Your address goes here"value={this.state.students.address}
                                 onChange={this.handleRegister} />
                     </div>
                     <div className="field">
                         <label>City</label>
-                        <input type="text" name="city" placeholder="Your current city goes here"value={this.state.students.gen}
+                        <input type="text" name="city" placeholder="Your current city goes here"value={this.state.students.city}
                                 onChange={this.handleRegister} />
-                    </div> */}
+                    </div>
                     </div>
                     <button className="ui button blue" onClick={this.handelSubmit}>Add</button>
                 </form>
@@ -90,11 +89,11 @@ class ClassForm extends Component{
                             </thead>
                             <tbody style={{textAlign:"left"}}>
                             <tr>
-                                <td><h4 style={{textAlign:"left"}}>{student.name}</h4></td> 
-                                <td><h4 style={{textAlign:"left"}}>{student.email}</h4></td>
-                                <td><h4 style={{textAlign:"center"}}>{student.gen}</h4></td>
-                                {/* <td><h4>{student.address}</h4></td>
-                                <td><h4>{student.city}</h4></td> */}
+                                <td><h4>{student.name}</h4></td> 
+                                <td><h4>{student.email}</h4></td>
+                                <td><h4>{student.mobileNo}</h4></td>
+                                <td><h4>{student.address}</h4></td>
+                                <td><h4>{student.city}</h4></td>
                                 </tr>
                             </tbody>
                         </table>  
@@ -103,7 +102,6 @@ class ClassForm extends Component{
                 );
            })}
             </>
-
             );
         }
     }
