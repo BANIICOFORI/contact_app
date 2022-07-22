@@ -2,6 +2,8 @@ import React from "react";
 
 
 class AddContact extends React.Component{
+   
+   
     render(){
         return(
             <div className="ui container center">
@@ -10,7 +12,7 @@ class AddContact extends React.Component{
                     <div className="two fields">
                     <div className="field">
                         <label>Name</label>
-                        <input type="text" name="name" placeholder="Name"/>
+                        <input type="text" name="name" placeholder="Name" />
                     </div>
                     <div className="field">
                         <label>Email</label>
